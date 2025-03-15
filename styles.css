@@ -1,0 +1,137 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-image: url("img/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* En-tête et navigation */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+
+
+
+
+
+.left-nav a, .right-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 2px #ffffff, 0 0 2px #ff00b3;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.left-nav a::after, .right-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #ffffffa4;
+    transition: width 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: block;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); /* Pas d'ombre par défaut */
+}
+
+.left-nav a:hover::after, .right-nav a:hover::after {
+    width: 100%;
+    box-shadow: 0 0 4px 4px #f700ff; /* Ombre visible au survol */
+}
+
+
+
+
+
+/* Section héro */
+.hero {
+    padding: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 24px;
+    margin-top: 40px;
+    font-weight: 600;
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff;
+}
+
+.content-section, .services-section {
+    width: 80%;
+    max-width: 900px;
+    margin: 60px auto;
+    line-height: 1.6;
+}
+
+.content-section p, .services-section p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.services-section h2 {
+    text-align: center;
+    font-size: 28px;
+    margin: 60px 0 30px;
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+
+    }
+    
+    .left-nav, .right-nav {
+        text-align: center;
+
+    }
+    
+    .hero h1 {
+        font-size: 36px;
+    }
+    
+    .hero h2 {
+        font-size: 24px;
+    }
+    
+    .hero h3 {
+        font-size: 18px;
+    }
+    
+    .content-section, .services-section {
+        width: 95%;
+    }
+}
