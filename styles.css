@@ -2,8 +2,9 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    
 }
 
 body {
@@ -12,14 +13,14 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: #fff;
+    color: #ffffffd3;
     min-height: 100vh;
     overflow-x: hidden;
 }
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 2000px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -32,9 +33,14 @@ header {
     gap: 60px;
 }
 
+logo img{
+    width: auto;
+    height: auto;
+}
 
-
-
+logo img:hover {
+    transform: scale(1.1);
+}
 
 
 .left-nav a, .right-nav a {
@@ -51,19 +57,20 @@ header {
 .left-nav a::after, .right-nav a::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 0px;
+    left: 50.5%;
     width: 0;
-    height: 1px;
+    height: 0.5px;
     background-color: #ffffffa4;
-    transition: width 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out, box-shadow 0.8s ease-in-out;
     display: block;
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); /* Pas d'ombre par défaut */
+    transform: translateX(-50%);
+
 }
 
 .left-nav a:hover::after, .right-nav a:hover::after {
     width: 100%;
-    box-shadow: 0 0 4px 4px #f700ff; /* Ombre visible au survol */
+    box-shadow: 0 0 3px 3px #f949ff; /* Ombre visible au survol */
 }
 
 
@@ -83,15 +90,15 @@ header {
 
 .hero h1 {
     font-size: 24px;
-    margin-top: 40px;
+    margin-top: 30px;
     font-weight: 600;
     text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff;
 }
 
 .content-section, .services-section {
     width: 80%;
-    max-width: 900px;
-    margin: 60px auto;
+    max-width: 1700px;
+    margin: 20px auto;
     line-height: 1.6;
 }
 
@@ -105,6 +112,7 @@ header {
     font-size: 28px;
     margin: 60px 0 30px;
     color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff;
 }
 
 /* Responsive */
@@ -120,15 +128,7 @@ header {
     }
     
     .hero h1 {
-        font-size: 36px;
-    }
-    
-    .hero h2 {
         font-size: 24px;
-    }
-    
-    .hero h3 {
-        font-size: 18px;
     }
     
     .content-section, .services-section {
